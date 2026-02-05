@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Roots Aesthetics Blog - Expert insights on aesthetic treatments, skincare, and beauty tips from Dr. Anju Mehta in London.">
+    <title>Blog | Roots Aesthetics London</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Iconify Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            800: '#292524',
+                            900: '#1c1917',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-feature-settings: "cv11", "ss01";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .glass-nav {
+            background: rgba(250, 245, 238, 1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 320ms cubic-bezier(.2,.9,.2,1), opacity 240ms ease;
+        }
+        .mobile-menu.open {
+            max-height: 420px;
+            opacity: 1;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fafaf9; }
+        ::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a29e; }
+
+        ::selection { background: #e7e5e4; color: #1c1917; }
+    </style>
+</head>
+<body class="text-stone-800 font-sans selection:bg-stone-200" style="background-color: rgba(250, 245, 238, 1);">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="../index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2 group">
+                <img src="../images/RootAesthetics.png" alt="Roots Aesthetics" width="100px">
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="../index.html#results" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Results</a>
+                <a href="../index.html#treatments" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Treatments</a>
+                <a href="../index.html#about" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Dr. Mehta</a>
+                <a href="index.html" class="text-sm font-medium text-stone-900 border-b-2 border-stone-900 transition-colors">Blog</a>
+                <a href="../index.html#booking" class="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="../book-Appointment/index.html" class="hidden md:flex items-center gap-2 px-5 py-2.5 bg-stone-900 text-white text-xs font-medium rounded-full hover:bg-stone-800 hover:shadow-lg hover:shadow-stone-200/50 transition-all duration-300">
+                    Book Consultation
+                </a>
+                <button id="mobileMenuButton" aria-expanded="false" class="md:hidden p-2 text-stone-600 hover:bg-stone-100 rounded-lg transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6 menu-icon"></i>
+                    <i data-lucide="x" class="w-6 h-6 close-icon hidden"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="mobile-menu md:hidden absolute left-0 right-0 top-full bg-white border-t border-stone-100 shadow-lg z-50">
+            <div class="px-6 py-4 flex flex-col gap-3">
+                <a href="../index.html#results" class="text-sm font-medium text-stone-700 hover:text-stone-900">Results</a>
+                <a href="../index.html#treatments" class="text-sm font-medium text-stone-700 hover:text-stone-900">Treatments</a>
+                <a href="../index.html#about" class="text-sm font-medium text-stone-700 hover:text-stone-900">Dr. Mehta</a>
+                <a href="index.html" class="text-sm font-medium text-stone-900">Blog</a>
+                <a href="../index.html#booking" class="text-sm font-medium text-stone-700 hover:text-stone-900">Contact</a>
+                <a href="../book-Appointment/index.html" class="mt-2 inline-flex items-center justify-center px-4 py-2 bg-stone-900 text-white text-sm font-medium rounded-full hover:bg-stone-800">Book Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-16 md:pt-40 md:pb-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-medium tracking-tighter text-stone-900 leading-tight mb-6">
+                Aesthetic Insights & <br>
+                <span class="text-stone-400">Expert Advice</span>
+            </h1>
+            <p class="text-lg md:text-xl text-stone-500 max-w-2xl mx-auto leading-relaxed font-light">
+                Discover the latest in aesthetic medicine, skincare tips, and treatment insights from Dr. Anju Mehta and the Roots Aesthetics team.
+            </p>
+        </div>
+    </header>
+
+    <!-- Blog Posts -->
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Blog Post 1 -->
+            <article class="bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition-all duration-300 group">
+                <div class="aspect-[4/3] bg-gradient-to-br from-stone-100 to-stone-200 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i data-lucide="sparkles" class="w-16 h-16 text-stone-300"></i>
+                    </div>
+                    <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-stone-700">Treatment Guide</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 text-xs text-stone-500 mb-3">
+                        <span>March 15, 2024</span>
+                        <span>•</span>
+                        <span>5 min read</span>
+                    </div>
+                    <h2 class="text-xl font-semibold text-stone-900 mb-3 group-hover:text-stone-600 transition-colors">
+                        Understanding Anti-Wrinkle Injections: What to Expect
+                    </h2>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        A comprehensive guide to anti-wrinkle treatments, including how they work, what to expect during your appointment, and how to maintain natural-looking results.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-stone-900 hover:text-stone-600 transition-colors">
+                        Read More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition-all duration-300 group">
+                <div class="aspect-[4/3] bg-gradient-to-br from-amber-50 to-amber-100 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i data-lucide="heart" class="w-16 h-16 text-amber-200"></i>
+                    </div>
+                    <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-stone-700">Skincare</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 text-xs text-stone-500 mb-3">
+                        <span>March 10, 2024</span>
+                        <span>•</span>
+                        <span>4 min read</span>
+                    </div>
+                    <h2 class="text-xl font-semibold text-stone-900 mb-3 group-hover:text-stone-600 transition-colors">
+                        The Science of Skin Hydration: Profhilo Explained
+                    </h2>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        Discover how Profhilo bio-remodelling treatment works to improve skin quality, hydration, and elasticity for a more youthful appearance.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-stone-900 hover:text-stone-600 transition-colors">
+                        Read More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition-all duration-300 group">
+                <div class="aspect-[4/3] bg-gradient-to-br from-stone-50 to-stone-100 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i data-lucide="shield-check" class="w-16 h-16 text-stone-300"></i>
+                    </div>
+                    <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-stone-700">Safety</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 text-xs text-stone-500 mb-3">
+                        <span>March 5, 2024</span>
+                        <span>•</span>
+                        <span>6 min read</span>
+                    </div>
+                    <h2 class="text-xl font-semibold text-stone-900 mb-3 group-hover:text-stone-600 transition-colors">
+                        Choosing a Qualified Aesthetic Practitioner
+                    </h2>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        Learn what qualifications to look for when choosing an aesthetic practitioner, and why medical training matters for safe, effective treatments.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-stone-900 hover:text-stone-600 transition-colors">
+                        Read More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 4 -->
+            <article class="bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition-all duration-300 group">
+                <div class="aspect-[4/3] bg-gradient-to-br from-stone-200 to-stone-300 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i data-lucide="trending-up" class="w-16 h-16 text-stone-400"></i>
+                    </div>
+                    <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-stone-700">Trends</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 text-xs text-stone-500 mb-3">
+                        <span>February 28, 2024</span>
+                        <span>•</span>
+                        <span>5 min read</span>
+                    </div>
+                    <h2 class="text-xl font-semibold text-stone-900 mb-3 group-hover:text-stone-600 transition-colors">
+                        Natural-Looking Results: The Art of Subtle Enhancement
+                    </h2>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        Exploring the philosophy behind natural-looking aesthetic treatments and how to achieve subtle, transformative results that enhance your unique features.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-stone-900 hover:text-stone-600 transition-colors">
+                        Read More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 5 -->
+            <article class="bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition-all duration-300 group">
+                <div class="aspect-[4/3] bg-gradient-to-br from-amber-100 to-amber-200 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i data-lucide="calendar" class="w-16 h-16 text-amber-300"></i>
+                    </div>
+                    <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-stone-700">Aftercare</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 text-xs text-stone-500 mb-3">
+                        <span>February 20, 2024</span>
+                        <span>•</span>
+                        <span>4 min read</span>
+                    </div>
+                    <h2 class="text-xl font-semibold text-stone-900 mb-3 group-hover:text-stone-600 transition-colors">
+                        Post-Treatment Care: Maximizing Your Results
+                    </h2>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        Essential aftercare tips to help you get the most from your aesthetic treatments, including skincare routines and lifestyle recommendations.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-stone-900 hover:text-stone-600 transition-colors">
+                        Read More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 6 -->
+            <article class="bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition-all duration-300 group">
+                <div class="aspect-[4/3] bg-gradient-to-br from-stone-100 to-stone-200 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i data-lucide="users" class="w-16 h-16 text-stone-300"></i>
+                    </div>
+                    <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-stone-700">Patient Stories</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 text-xs text-stone-500 mb-3">
+                        <span>February 15, 2024</span>
+                        <span>•</span>
+                        <span>3 min read</span>
+                    </div>
+                    <h2 class="text-xl font-semibold text-stone-900 mb-3 group-hover:text-stone-600 transition-colors">
+                        Real Patient Experiences: What to Expect
+                    </h2>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        Hear from patients about their journey with aesthetic treatments, from initial consultation to achieving their desired results.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-stone-900 hover:text-stone-600 transition-colors">
+                        Read More
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="mt-24 max-w-4xl mx-auto">
+            <div class="bg-gradient-to-r from-stone-900 to-stone-800 rounded-2xl p-8 md:p-12 text-center text-white">
+                <h2 class="text-2xl md:text-3xl font-semibold mb-4">Stay Updated</h2>
+                <p class="text-stone-300 mb-6 max-w-2xl mx-auto">
+                    Subscribe to our newsletter for the latest insights on aesthetic treatments, skincare tips, and exclusive offers.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-400">
+                    <button type="submit" class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors font-medium">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-stone-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div class="col-span-2 md:col-span-1">
+                    <a href="../index.html" class="text-lg font-semibold tracking-tighter text-stone-900 flex items-center gap-2 mb-6">
+                        <img src="../images/RootAesthetics.png" alt="Roots Aesthetics" width="100px">
+                    </a>
+                    <p class="text-xs text-stone-500 leading-relaxed max-w-xs">
+                        Refining beauty through medical excellence. London based aesthetic clinic led by Dr. Anju Mehta.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Treatments</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li><a href="../Anti-Wrinkle-Injections/index.html" class="hover:text-stone-900 transition-colors">Anti-Wrinkle</a></li>
+                        <li><a href="../Dermal-Fillers/index.html" class="hover:text-stone-900 transition-colors">Dermal Fillers</a></li>
+                        <li><a href="../Skin-Boosters/index.html" class="hover:text-stone-900 transition-colors">Skin Boosters</a></li>
+                        <li><a href="../index.html#treatments" class="hover:text-stone-900 transition-colors">All Treatments</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Clinic</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li><a href="../index.html#about" class="hover:text-stone-900 transition-colors">About Dr. Mehta</a></li>
+                        <li><a href="index.html" class="hover:text-stone-900 transition-colors">Blog</a></li>
+                        <li><a href="../Real-Stories/index.html" class="hover:text-stone-900 transition-colors">Patient Results</a></li>
+                        <li><a href="../book-Appointment/index.html" class="hover:text-stone-900 transition-colors">Book Appointment</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-stone-900 mb-4 text-sm">Contact</h4>
+                    <ul class="space-y-2 text-sm text-stone-500">
+                        <li><a href="tel:+447580748097" class="hover:text-stone-900 transition-colors">+44 7580 748097</a></li>
+                        <li><a href="mailto:info@RootsAesthetics.co.uk" class="hover:text-stone-900 transition-colors">Email Us</a></li>
+                        <li><a href="../index.html#booking" class="hover:text-stone-900 transition-colors">Visit Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-stone-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-stone-500">© 2024 Roots Aesthetics. All rights reserved.</p>
+                <div class="flex items-center gap-6 text-xs text-stone-500">
+                    <a href="/privacy" class="hover:text-stone-900 transition-colors">Privacy Policy</a>
+                    <a href="/terms" class="hover:text-stone-900 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = mobileMenuButton.querySelector('.menu-icon');
+        const closeIcon = mobileMenuButton.querySelector('.close-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            mobileMenuButton.setAttribute('aria-expanded', isOpen);
+            menuIcon.classList.toggle('hidden', isOpen);
+            closeIcon.classList.toggle('hidden', !isOpen);
+        });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
